@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:14050/</loc>
+    <loc>http://celestialli.github.io/posts/</loc>
     <lastmod>2025-06-10T17:02:08+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:14050/posts/</loc>
+    <loc>http://celestialli.github.io/</loc>
     <lastmod>2025-06-10T17:02:08+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:14050/posts/my-first-post/</loc>
+    <loc>http://celestialli.github.io/posts/my-first-post/</loc>
     <lastmod>2025-06-10T17:02:08+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:14050/authors/</loc>
+    <loc>http://celestialli.github.io/authors/</loc>
   </url><url>
-    <loc>http://localhost:14050/categories/</loc>
+    <loc>http://celestialli.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:14050/series/</loc>
+    <loc>http://celestialli.github.io/series/</loc>
   </url><url>
-    <loc>http://localhost:14050/tags/</loc>
+    <loc>http://celestialli.github.io/tags/</loc>
   </url>
 </urlset>
