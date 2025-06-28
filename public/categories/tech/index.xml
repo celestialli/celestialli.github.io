@@ -1,0 +1,33 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tech - Category - Anton&#39;s Homepage</title>
+        <link>http://localhost:13134/categories/tech/</link>
+        <description>Tech - Category - Anton&#39;s Homepage</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>real.celestialli@gmail.com (Anton(Shuqiao) Li)</managingEditor>
+            <webMaster>real.celestialli@gmail.com (Anton(Shuqiao) Li)</webMaster><lastBuildDate>Sun, 22 Jun 2025 11:07:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:13134/categories/tech/" rel="self" type="application/rss+xml" /><item>
+    <title>Accelerating Global Downloads from GitHub Using jsDelivr CDN</title>
+    <link>http://localhost:13134/posts/github-jsdelivr-cdn/</link>
+    <pubDate>Sun, 22 Jun 2025 11:07:29 &#43;0800</pubDate>
+    <author>Anton(Shuqiao) Li</author>
+    <guid>http://localhost:13134/posts/github-jsdelivr-cdn/</guid>
+    <description><![CDATA[<p>I&rsquo;ve been developing <a href="https://github.com/celestialli/swedishelf" target="_blank" rel="noopener noreffer ">swedishelf</a>(a CLI tool for learning Swedish) that requires downloading dictionary files from a separate GitHub repository during runtime. This presented a challenge: how could I ensure users worldwide experience fast and reliable downloads regardless of their geographic location?</p>
+<h2 id="the-challenge">The Challenge</h2>
+<p>When directly downloading files from GitHub repositories, users in different regions may experience varying download speeds due to geographic distance from GitHub&rsquo;s servers. For a CLI tool that needs to fetch resources on-demand, this could result in poor user experience, especially for users in regions far from GitHub&rsquo;s primary infrastructure.</p>]]></description>
+</item>
+<item>
+    <title>How to start a blog on GitHub Pages with Hugo</title>
+    <link>http://localhost:13134/posts/start-blog/</link>
+    <pubDate>Sun, 15 Jun 2025 18:32:08 &#43;0800</pubDate>
+    <author>Anton(Shuqiao) Li</author>
+    <guid>http://localhost:13134/posts/start-blog/</guid>
+    <description><![CDATA[<p>GitHub Pages offers a free and robust platform for hosting personal blogs.
+There are several static site generators available for this purpose.
+Hugo is particularly well-suited for technical blogs due to its performance,
+flexibility, and extensive theme library. This guide will be demonstrated mainly
+on Windows and is intended for beginners with basic familiarity with Git and command-line operations.</p>
+<h2 id="steps">Steps</h2>
+<h3 id="create-a-github-pages-repo">Create a GitHub Pages repo</h3>
+<p></p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,17 +1,11 @@
 +++ 
-date = 2025-06-11T18:32:08+08:00
+date = 2025-06-15T18:32:08+08:00
 title = "How to start a blog on GitHub Pages with Hugo"
 description = "A guide to creating and deploying a personal blog using Hugo and GitHub Pages"
-slug = ""
-authors = ["Shuqiao Li"]
+author = "Anton(Shuqiao) Li"
 tags = ["hugo", "blog"]
 categories = ["tech"]
-externalLink = ""
-series = []
 +++
-# How to start a blog on GitHub Pages with Hugo
-
-## Introduction
 
 GitHub Pages offers a free and robust platform for hosting personal blogs.
 There are several static site generators available for this purpose.
@@ -72,7 +66,7 @@ Then you visit the output address, you'll see your blog locally.
 Link your local directory to your github repo `<username>.github.io`. To do so, you'll
 most possibly run:
 
-```
+```bash
 git remote add origin <remote-url>
 ```
 

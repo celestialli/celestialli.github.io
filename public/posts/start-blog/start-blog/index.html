@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=13134&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>How to start a blog on GitHub Pages with Hugo - Anton&#39;s Homepage</title><meta name="Description" content="A guide to creating and deploying a personal blog using Hugo and GitHub Pages"><meta property="og:url" content="http://localhost:13134/posts/start-blog/start-blog/">
+  <meta property="og:site_name" content="Anton&#39;s Homepage">
+  <meta property="og:title" content="How to start a blog on GitHub Pages with Hugo">
+  <meta property="og:description" content="A guide to creating and deploying a personal blog using Hugo and GitHub Pages">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-15T18:32:08+08:00">
+    <meta property="article:modified_time" content="2025-06-15T18:32:08+08:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to start a blog on GitHub Pages with Hugo">
+  <meta name="twitter:description" content="A guide to creating and deploying a personal blog using Hugo and GitHub Pages">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:13134/posts/start-blog/start-blog/" /><link rel="next" href="http://localhost:13134/posts/github-jsdelivr-cdn/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to start a blog on GitHub Pages with Hugo",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:13134\/posts\/start-blog\/start-blog\/"
+        },"genre": "posts","keywords": "hugo, blog","wordcount":  410 ,
+        "url": "http:\/\/localhost:13134\/posts\/start-blog\/start-blog\/","datePublished": "2025-06-15T18:32:08+08:00","dateModified": "2025-06-15T18:32:08+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Anton(Shuqiao) Li"
+            },"description": "A guide to creating and deploying a personal blog using Hugo and GitHub Pages"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Anton&#39;s Homepage">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Anton&#39;s Homepage">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">How to start a blog on GitHub Pages with Hugo</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Anton(Shuqiao) Li</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-06-15">2025-06-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;410 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#steps">Steps</a>
+      <ul>
+        <li><a href="#create-a-github-pages-repo">Create a GitHub Pages repo</a></li>
+        <li><a href="#install-hugo">Install Hugo</a></li>
+        <li><a href="#create-local-hugo-project">Create local Hugo project</a></li>
+        <li><a href="#configure-hugo-project">Configure Hugo project</a></li>
+        <li><a href="#host-on-github-pages">Host on GitHub Pages</a></li>
+        <li><a href="#add-a-post">Add a post</a></li>
+      </ul>
+    </li>
+    <li><a href="#more-information">More Information</a>
+      <ul>
+        <li><a href="#use-other-themes">Use other themes</a></li>
+        <li><a href="#configure-your-site">Configure your site</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="how-to-start-a-blog-on-github-pages-with-hugo">How to start a blog on GitHub Pages with Hugo</h1>
+<h2 id="introduction">Introduction</h2>
+<p>GitHub Pages offers a free and robust platform for hosting personal blogs.
+There are several static site generators available for this purpose.
+Hugo is particularly well-suited for technical blogs due to its performance,
+flexibility, and extensive theme library. This guide will be demonstrated mainly
+on Windows and is intended for beginners with basic familiarity with Git and command-line operations.</p>
+<h2 id="steps">Steps</h2>
+<h3 id="create-a-github-pages-repo">Create a GitHub Pages repo</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/create-gh-repo.png"
+        data-srcset="/images/create-gh-repo.png, /images/create-gh-repo.png 1.5x, /images/create-gh-repo.png 2x"
+        data-sizes="auto"
+        alt="/images/create-gh-repo.png"
+        title="create-gh-repo" /></p>
+<p>The repo name <strong>must be</strong> <code>&lt;username&gt;.github.io</code>, for example,
+my username is <code>celestialli</code>, so my repo name should be <code>celestialli.github.io</code>.</p>
+<p>Check &ldquo;Add a README file&rdquo; so that the repo will set main as the default branch.</p>
+<h3 id="install-hugo">Install Hugo</h3>
+<p>First of all: Install Git.</p>
+<p>Go to <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer ">Hugo GitHub release page</a>,
+choose your platform and download the extended_withdeploy version.
+For example, I&rsquo;m planning to use hugo on Windows and I have x64 CPU.
+I&rsquo;ll download <code>hugo_extended_withdeploy_0.147.8_windows-amd64.zip</code>.</p>
+<p>After extracting the zip file, add the .exe path to the system <code>Path</code> environment variable,
+so that we can call hugo in a terminal anywhere.</p>
+<p>To verify your installation, run <code>hugo version</code> in your terminal</p>
+<h3 id="create-local-hugo-project">Create local Hugo project</h3>
+<p>Open a git bash on a desired path, run <code>hugo new site &lt;username&gt;.github.io</code>.
+This will create a new directory named <code>&lt;username&gt;.github.io</code>.</p>
+<h3 id="configure-hugo-project">Configure Hugo project</h3>
+<p>We will use hugo-coder theme as an example.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> &lt;username&gt;.github.io
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder</span></span></code></pre></div></div>
+<p>Open hugo.toml, add or change <code>theme = &quot;hugo-coder&quot;</code>.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server</span></span></code></pre></div></div>
+<p>Then you visit the output address, you&rsquo;ll see your blog locally.</p>
+<h3 id="host-on-github-pages">Host on GitHub Pages</h3>
+<p>Link your local directory to your github repo <code>&lt;username&gt;.github.io</code>. To do so, you&rsquo;ll
+most possibly run:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote add origin &lt;remote-url&gt;</span></span></code></pre></div></div>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/gh-url.png"
+        data-srcset="/images/gh-url.png, /images/gh-url.png 1.5x, /images/gh-url.png 2x"
+        data-sizes="auto"
+        alt="/images/gh-url.png"
+        title="gh-url" /></p>
+<p>The <code>&lt;remote-url&gt;</code> can be https or ssh url. It&rsquo;s up to you.</p>
+<p>Then you follow the <a href="https://gohugo.io/host-and-deploy/host-on-github-pages/" target="_blank" rel="noopener noreffer ">Hugo official guide</a>
+to configure the workflow.</p>
+<p>Then you can visit your page with <code>&lt;username&gt;.github.io</code>. Everytime you push to the main branch of the repo,
+a workflow will start and deploy the update to the site.</p>
+<h3 id="add-a-post">Add a post</h3>
+<p>To add a post, you can see <a href="https://gohugo.io/getting-started/quick-start/#add-content" target="_blank" rel="noopener noreffer ">Hugo official guide</a>.</p>
+<p>After adding a post, you just commit and push the update from local machine to the repo. The update will deploy
+automatically.</p>
+<h2 id="more-information">More Information</h2>
+<h3 id="use-other-themes">Use other themes</h3>
+<p>Go to <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer ">Hugo themes</a>. Choose one you like, and click &ldquo;Download&rdquo;. It will teach you how
+to install.</p>
+<h3 id="configure-your-site">Configure your site</h3>
+<p>You may configure your site with hugo.toml. To see how to configure the site, you may see an example at
+<code>themes\&lt;your themme&gt;\exampleSite\hugo.toml</code></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-06-15</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:13134/posts/start-blog/start-blog/" data-title="How to start a blog on GitHub Pages with Hugo" data-hashtags="hugo,blog"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:13134/posts/start-blog/start-blog/" data-title="How to start a blog on GitHub Pages with Hugo"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:13134/posts/start-blog/start-blog/" data-hashtag="hugo"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:13134/posts/start-blog/start-blog/" data-title="How to start a blog on GitHub Pages with Hugo"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:13134/posts/start-blog/start-blog/" data-title="How to start a blog on GitHub Pages with Hugo"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:13134/posts/start-blog/start-blog/" data-title="How to start a blog on GitHub Pages with Hugo"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:13134/posts/start-blog/start-blog/" data-title="How to start a blog on GitHub Pages with Hugo" data-description="A guide to creating and deploying a personal blog using Hugo and GitHub Pages"><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a13134%2fposts%2fstart-blog%2fstart-blog%2f&amp;text=How%20to%20start%20a%20blog%20on%20GitHub%20Pages%20with%20Hugo" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/blog/">Blog</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/posts/github-jsdelivr-cdn/" class="next" rel="next" title="How to start a blog on GitHub Pages with Hugo">How to start a blog on GitHub Pages with Hugo<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shuqiao Li on Anton&#39;s Homepage</title>
+    <link>http://localhost:13134/authors/shuqiao-li/</link>
+    <description>Recent content in Shuqiao Li on Anton&#39;s Homepage</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Jun 2025 18:32:08 +0800</lastBuildDate>
+    <atom:link href="http://localhost:13134/authors/shuqiao-li/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to start a blog on GitHub Pages with Hugo</title>
+      <link>http://localhost:13134/posts/start-blog/</link>
+      <pubDate>Wed, 11 Jun 2025 18:32:08 +0800</pubDate>
+      <guid>http://localhost:13134/posts/start-blog/</guid>
+      <description>&lt;h1 id=&#34;how-to-start-a-blog-on-github-pages-with-hugo&#34;&gt;&#xD;&#xA;  How to start a blog on GitHub Pages with Hugo&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#how-to-start-a-blog-on-github-pages-with-hugo&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;&#xD;&#xA;  Introduction&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#introduction&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;GitHub Pages offers a free and robust platform for hosting personal blogs.&#xA;There are several static site generators available for this purpose.&#xA;Hugo is particularly well-suited for technical blogs due to its performance,&#xA;flexibility, and extensive theme library. This guide will be demonstrated mainly&#xA;on Windows and is intended for beginners with basic familiarity with Git and command-line operations.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Anton&#39;s Homepage</title>
+        <link>http://localhost:13134/tags/</link>
+        <description>Tags - Tag - Anton&#39;s Homepage</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>real.celestialli@gmail.com (Anton(Shuqiao) Li)</managingEditor>
+            <webMaster>real.celestialli@gmail.com (Anton(Shuqiao) Li)</webMaster><lastBuildDate>Sun, 22 Jun 2025 11:07:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:13134/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>CDN</title>
+    <link>http://localhost:13134/tags/cdn/</link>
+    <pubDate>Sun, 22 Jun 2025 11:07:29 &#43;0800</pubDate>
+    <author>Anton(Shuqiao) Li</author>
+    <guid>http://localhost:13134/tags/cdn/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Download</title>
+    <link>http://localhost:13134/tags/download/</link>
+    <pubDate>Sun, 22 Jun 2025 11:07:29 &#43;0800</pubDate>
+    <author>Anton(Shuqiao) Li</author>
+    <guid>http://localhost:13134/tags/download/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>GitHub</title>
+    <link>http://localhost:13134/tags/github/</link>
+    <pubDate>Sun, 22 Jun 2025 11:07:29 &#43;0800</pubDate>
+    <author>Anton(Shuqiao) Li</author>
+    <guid>http://localhost:13134/tags/github/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Speedup</title>
+    <link>http://localhost:13134/tags/speedup/</link>
+    <pubDate>Sun, 22 Jun 2025 11:07:29 &#43;0800</pubDate>
+    <author>Anton(Shuqiao) Li</author>
+    <guid>http://localhost:13134/tags/speedup/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Blog</title>
+    <link>http://localhost:13134/tags/blog/</link>
+    <pubDate>Sun, 15 Jun 2025 18:32:08 &#43;0800</pubDate>
+    <author>Anton(Shuqiao) Li</author>
+    <guid>http://localhost:13134/tags/blog/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Hugo</title>
+    <link>http://localhost:13134/tags/hugo/</link>
+    <pubDate>Sun, 15 Jun 2025 18:32:08 &#43;0800</pubDate>
+    <author>Anton(Shuqiao) Li</author>
+    <guid>http://localhost:13134/tags/hugo/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

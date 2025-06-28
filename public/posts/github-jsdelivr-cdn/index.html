@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=13134&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Accelerating Global Downloads from GitHub Using jsDelivr CDN - Anton&#39;s Homepage</title><meta name="Description" content="Share cool things"><meta property="og:url" content="http://localhost:13134/posts/github-jsdelivr-cdn/">
+  <meta property="og:site_name" content="Anton&#39;s Homepage">
+  <meta property="og:title" content="Accelerating Global Downloads from GitHub Using jsDelivr CDN">
+  <meta property="og:description" content="I’ve been developing swedishelf(a CLI tool for learning Swedish) that requires downloading dictionary files from a separate GitHub repository during runtime. This presented a challenge: how could I ensure users worldwide experience fast and reliable downloads regardless of their geographic location?
+The Challenge When directly downloading files from GitHub repositories, users in different regions may experience varying download speeds due to geographic distance from GitHub’s servers. For a CLI tool that needs to fetch resources on-demand, this could result in poor user experience, especially for users in regions far from GitHub’s primary infrastructure.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-22T11:07:29+08:00">
+    <meta property="article:modified_time" content="2025-06-22T11:07:29+08:00">
+    <meta property="article:tag" content="GitHub">
+    <meta property="article:tag" content="CDN">
+    <meta property="article:tag" content="Download">
+    <meta property="article:tag" content="Speedup">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Accelerating Global Downloads from GitHub Using jsDelivr CDN">
+  <meta name="twitter:description" content="I’ve been developing swedishelf(a CLI tool for learning Swedish) that requires downloading dictionary files from a separate GitHub repository during runtime. This presented a challenge: how could I ensure users worldwide experience fast and reliable downloads regardless of their geographic location?
+The Challenge When directly downloading files from GitHub repositories, users in different regions may experience varying download speeds due to geographic distance from GitHub’s servers. For a CLI tool that needs to fetch resources on-demand, this could result in poor user experience, especially for users in regions far from GitHub’s primary infrastructure.">
+<meta name="application-name" content="Anton&#39;s Homepage">
+<meta name="apple-mobile-web-app-title" content="Anton&#39;s Homepage">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:13134/posts/github-jsdelivr-cdn/" /><link rel="prev" href="http://localhost:13134/posts/start-blog/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Accelerating Global Downloads from GitHub Using jsDelivr CDN",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:13134\/posts\/github-jsdelivr-cdn\/"
+        },"genre": "posts","keywords": "GitHub, CDN, download, speedup","wordcount":  283 ,
+        "url": "http:\/\/localhost:13134\/posts\/github-jsdelivr-cdn\/","datePublished": "2025-06-22T11:07:29+08:00","dateModified": "2025-06-22T11:07:29+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Anton(Shuqiao) Li"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Anton&#39;s Homepage">Anton&#39;s Homepage</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Anton&#39;s Homepage">Anton&#39;s Homepage</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Accelerating Global Downloads from GitHub Using jsDelivr CDN</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Anton(Shuqiao) Li</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-06-22">2025-06-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;283 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-challenge">The Challenge</a></li>
+    <li><a href="#the-solution-jsdelivr-cdn">The Solution: jsDelivr CDN</a>
+      <ul>
+        <li><a href="#implementation">Implementation</a></li>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#results-and-benefits">Results and Benefits</a></li>
+    <li><a href="#recommendation">Recommendation</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>I&rsquo;ve been developing <a href="https://github.com/celestialli/swedishelf" target="_blank" rel="noopener noreffer ">swedishelf</a>(a CLI tool for learning Swedish) that requires downloading dictionary files from a separate GitHub repository during runtime. This presented a challenge: how could I ensure users worldwide experience fast and reliable downloads regardless of their geographic location?</p>
+<h2 id="the-challenge">The Challenge</h2>
+<p>When directly downloading files from GitHub repositories, users in different regions may experience varying download speeds due to geographic distance from GitHub&rsquo;s servers. For a CLI tool that needs to fetch resources on-demand, this could result in poor user experience, especially for users in regions far from GitHub&rsquo;s primary infrastructure.</p>
+<h2 id="the-solution-jsdelivr-cdn">The Solution: jsDelivr CDN</h2>
+<p>After consulting with AI assistance, I discovered jsDelivr—a free, fast, and reliable CDN service that provides global acceleration for GitHub content. The solution is elegantly simple and requires no complex setup.</p>
+<h3 id="implementation">Implementation</h3>
+<p>To leverage jsDelivr&rsquo;s CDN capabilities, simply transform your GitHub URLs using this pattern:</p>
+<p><strong>Original GitHub URL:</strong></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://github.com/username/repository/blob/branch/file-path</span></span></code></pre></div></div>
+<p><strong>jsDelivr CDN URL:</strong></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://cdn.jsdelivr.net/gh/username/repository@branch/file-path</span></span></code></pre></div></div>
+<h3 id="example">Example</h3>
+<p>If your original file URL is:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://github.com/myuser/dictionaries/blob/main/swedish-dict.json</span></span></code></pre></div></div>
+<p>The accelerated CDN URL becomes:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://cdn.jsdelivr.net/gh/myuser/dictionaries@main/swedish-dict.json</span></span></code></pre></div></div>
+<h2 id="results-and-benefits">Results and Benefits</h2>
+<p>This approach has proven highly effective in my implementation, delivering several key advantages:</p>
+<ul>
+<li><strong>Global acceleration</strong>: Users worldwide experience consistently fast download speeds</li>
+<li><strong>Zero cost</strong>: jsDelivr provides this service free of charge</li>
+<li><strong>Simple implementation</strong>: Requires only a URL format change</li>
+<li><strong>No additional infrastructure</strong>: No need to set up your own CDN or hosting</li>
+</ul>
+<h2 id="recommendation">Recommendation</h2>
+<p>For developers building tools that need to download resources from GitHub repositories, especially those serving a global user base, I highly recommend implementing jsDelivr CDN acceleration. It&rsquo;s a simple yet powerful solution that significantly enhances user experience.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>Special thanks to the jsDelivr team for providing this excellent service to the developer community.</p>
+<hr>
+<p><em>Originally published as part of my development journey with <a href="https://github.com/celestialli/swedishelf" target="_blank" rel="noopener noreffer ">swedishelf</a>.</em></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-06-22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:13134/posts/github-jsdelivr-cdn/" data-hashtag="GitHub"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="http://localhost:13134/posts/github-jsdelivr-cdn/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:13134/posts/github-jsdelivr-cdn/" data-title="Accelerating Global Downloads from GitHub Using jsDelivr CDN"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="http://localhost:13134/posts/github-jsdelivr-cdn/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:13134/posts/github-jsdelivr-cdn/" data-title="Accelerating Global Downloads from GitHub Using jsDelivr CDN"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:13134/posts/github-jsdelivr-cdn/" data-title="Accelerating Global Downloads from GitHub Using jsDelivr CDN" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a13134%2fposts%2fgithub-jsdelivr-cdn%2f&amp;text=Accelerating%20Global%20Downloads%20from%20GitHub%20Using%20jsDelivr%20CDN" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/github/">GitHub</a>,&nbsp;<a href="/tags/cdn/">CDN</a>,&nbsp;<a href="/tags/download/">Download</a>,&nbsp;<a href="/tags/speedup/">Speedup</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/start-blog/" class="prev" rel="prev" title="How to start a blog on GitHub Pages with Hugo"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>How to start a blog on GitHub Pages with Hugo</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Anton(Shuqiao) Li</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>
