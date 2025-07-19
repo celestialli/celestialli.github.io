@@ -1,5 +1,5 @@
 +++ 
-date = 2025-06-22T11:07:29+08:00
+date = 2025-07-18T22:07:29+08:00
 title = "Accelerating Global Downloads from GitHub Using jsDelivr CDN"
 author = "Anton(Shuqiao) Li"
 tags = ["GitHub", "CDN", "download", "speedup"]
@@ -53,6 +53,10 @@ This approach has proven highly effective in my implementation, delivering sever
 ## Recommendation
 
 For developers building tools that need to download resources from GitHub repositories, especially those serving a global user base, I highly recommend implementing jsDelivr CDN acceleration. It's a simple yet powerful solution that significantly enhances user experience.
+
+## Current Status of swedishelf
+
+Due to software design considerations, swedishelf has not automatically downloaded dictionaries during runtime since version v0.1.1. However, this CDN approach can still be highly beneficial for developers and readers who encounter similar challenges in their own projects, or for anyone looking to implement efficient file distribution strategies using GitHub as a content source.
 
 ## Acknowledgments
 
